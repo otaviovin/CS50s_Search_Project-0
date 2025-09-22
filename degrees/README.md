@@ -1,15 +1,43 @@
-# Test with small
+# Degrees — Shortest Actor Connection
+
+Find the shortest chain of movies that connects any two actors (the "Six Degrees" problem).  
+This project loads a movie/actor dataset and uses **breadth-first search (BFS)** to compute the shortest path between two actors where each step is "Actor A and Actor B starred in Movie X".
+
+> This repository is based on the CS50 AI `degrees` project distribution (small/large datasets).  
+> Download distribution code (data): `https://cdn.cs50.net/ai/2023/x/projects/0/degrees.zip`
+
+----------------------------------------------------------------------------------------------------
+
+## Quick start
+
+### Prerequisites
+- Python 3.7+ (no external dependencies — uses only the Python standard library and CSV parsing)
+
+### Run
+From the project root (where `degrees.py` is located), choose a dataset folder (`small` or `large`) and run:
+
+```bash
+# run against the small dataset
+python degrees.py small
+
+# run against the large dataset
+python degrees.py large
+```
+
+----------------------------------------------------------------------------------------------------
+
+# Test with small:
 ```bash
 python degrees.py small
 ```
 
-## Test 1
+## Test 1 - Example 
 Name: Kevin Bacon
 Name: Tom Hanks
 1 degrees of separation.
 1: Kevin Bacon and Tom Hanks starred in Apollo 13
 
-## Test 2
+## Test 2 - Example
 Name: Jack Nicholson
 Name: Sally Field
 3 degrees of separation.
@@ -22,14 +50,14 @@ Name: Sally Field
 python degrees.py large
 ```
 
-## Test 1
+## Test 1 - Example
 Name: Dan Aykroyd
 Name: Clint Eastwood
 2 degrees of separation.
 1: Dan Aykroyd and James Garner starred in My Fellow Americans
 2: James Garner and Clint Eastwood starred in Space Cowboys
 
-## Test 2
+## Test 2 - Example
 Name: Salma Hayek
 Name: Madonna
 2 degrees of separation.
@@ -37,62 +65,4 @@ Name: Madonna
 2: Antonio Banderas and Madonna starred in Evita
 
 ----------------------------------------------------------------------------------------------------
-
-# Submission Instructions (Commented for Reference)
-
-## Git Configuration
-# Set your global Git username
-```bash
-git config --global user.name "Otavio Bacovis"
-```
-# Set your global Git email
-```bash
-git config --global user.email "otavio_bacovis@hotmail.com"
-```
-
-## Navigate to your project directory
-```bash
-cd "C:\Python_Projects\Projetos\Harvard CS50's Introduction to Artificial Intelligence with Python - Search - Project 0\degrees"
-```
-
-## Initialize Git repository (if not already initialized)
-```bash
-git init
-```
-
-## Add remote repository
-# If remote does not exist:
-```bash
-git remote add origin https://github.com/me50/otaviovin.git
-```
-# If remote exists and you want to update it:
-```bash
-git remote set-url origin https://github.com/me50/otaviovin.git
-```
-
-## Stage files for commit
-```bash
-git add degrees.py util.py small/ large/
-```
-
-## Commit your changes
-```bash
-git commit -m "Submit Project 0: Degrees"
-```
-
-## Set the main branch (if needed)
-```bash
-git branch -M main
-```
-
-## Push changes to GitHub
-```bash
-git push -u origin main --force
-```
-```bash
-git push origin main:ai50/projects/2024/x/degrees
-```
-
-# After pushing, your project will be available on GitHub at: https://github.com/me50/otaviovin.git
-
 
